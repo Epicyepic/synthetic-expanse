@@ -1,0 +1,143 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: none; /* Removed the background */
+    z-index: 2;
+    transition: opacity 0.8s ease-in-out; /* Smooth opacity transition */
+}
+
+.hero {
+    transition: opacity 0.8s ease-in-out;
+}
+
+.hero.hidden {
+    opacity: 0;
+}
+
+.hero h1 {
+    font-size: 4em;
+    color: #ccc;
+    text-shadow: 0 0 10px #00f, 0 0 20px #00f;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.info {
+    padding: 60px; /* Increased padding for more space */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky; /* For other browsers */
+    top: 180%; /* Distance from the top when sticky */
+    left: 50%;
+    transform: translate(0, 0%) scale(0.5);
+    transition: transform 0.75s ease-in-out, font-size 2s ease-in-out, opacity 2s ease-in-out;
+    opacity: 0;
+    text-align: center;
+}
+
+.info.active {
+    transform: translate(0, -200%) scale(1);
+    font-size: 1em; /* Adjusted for a more prominent effect */
+    opacity: 0.9;
+}
+
+.info.disappearing {
+    opacity: 0;
+    transform: translate(0, -300%) scale(1.3);
+    transition: transform 1s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.map {
+    background: url('space-map.jpg') no-repeat center center;
+    background-size: cover;
+    height: 2000px; /* Increased height for more space */
+    position: relative;
+}
+
+.large-image {
+    text-align: center;
+    padding: 40px 20px; /* Adjust padding as needed */
+    top: -60%; /* Distance from the top when sticky */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky; /* For other browsers */
+    z-index:-1
+}
+
+.large-image img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.news, .community {
+    padding: 200px; /* Increased padding for more space */
+    text-align: center;
+    background: #000;
+
+.discord-icon {
+    display: inline-block;
+    margin-top: 20px; /* Space above the icon */
+}
+
+.discord-icon img {
+    width: 200px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.discord-icon img:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+}
+footer {
+    background: #111;
+    text-align: center;
+    padding: 20px; /* Increased padding for more space */
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+#sticky-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: none; /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#sticky-buttons button {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
